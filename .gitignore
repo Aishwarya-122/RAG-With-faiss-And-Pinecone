@@ -1,0 +1,8 @@
+.venv/
+venv/
+myvenv/
+__pycache__/
+*.pyc
+.env
+uploaded_documents.txt
+temp.txt
