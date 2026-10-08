@@ -1,0 +1,13 @@
+[Unit]
+Description=Streamlit RAG Application
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/RAG-With-faiss-And-Pinecone
+Environment="PATH=/home/ubuntu/RAG-With-faiss-And-Pinecone/venv/bin"
+ExecStart=/home/ubuntu/RAG-With-faiss-And-Pinecone/venv/bin/streamlit run combined_app.py --server.address 0.0.0.0 --server.port 8501
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
